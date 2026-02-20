@@ -103,7 +103,7 @@ If you still encounter issues after setting up the environment variables and cre
 
 ## Fixing "Method Not Allowed" Error
 
-If you encounter a "Method Not Allowed" error when uploading a resume, this is likely due to how Vercel is handling the API routes. We've implemented two complementary fixes:
+If you encounter a "Method Not Allowed" error when uploading a resume, this is likely due to how Vercel is handling the API routes. We've implemented three complementary fixes:
 
 ### 1. Updated vercel.json with Explicit Route Configurations
 
@@ -144,7 +144,36 @@ export async function OPTIONS(req: Request) {
 }
 ```
 
-This dual approach ensures that the API routes properly handle CORS preflight requests and should resolve the "Method Not Allowed" error. After deploying these changes, the upload functionality should work correctly.
+### 3. Enhanced Middleware with Comprehensive CORS Support
+
+As an additional layer of protection, we've updated the middleware to properly handle CORS:
+
+```typescript
+export function middleware(request: NextRequest) {
+  // Handle CORS preflight requests
+  if (request.method === 'OPTIONS') {
+    return new NextResponse(null, {
+      status: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Date, X-Api-Version',
+        'Access-Control-Max-Age': '86400',
+      },
+    });
+  }
+
+  // Add CORS headers to all responses
+  const response = NextResponse.next();
+  response.headers.set('Access-Control-Allow-Origin', '*');
+  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  
+  return response;
+}
+```
+
+This triple approach ensures that your API routes properly handle CORS preflight requests at multiple levels and should resolve the "Method Not Allowed" error. After deploying these changes, the upload functionality should work correctly.
 
 ## Advanced Troubleshooting
 
