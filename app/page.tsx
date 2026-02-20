@@ -98,7 +98,7 @@ export default function Home() {
               </p>
               <p className="mt-3 text-slate-700">
                 The 6-Second Test isn&apos;t a resume rewrite service. It&apos;s not an AI keyword generator, and it&apos;s definitely not a &quot;Beat the ATS&quot; gimmick.
-                It&apos;s a clarity audit — built from how real recruiters actually screen.
+                It&apos;s a clarity audit — built from how real recruiters actually screen, and designed to help you build your resume with intention.
               </p>
              <p className="mt-3 text-slate-700">
                Rooting & Recruiting for you,<br />Oscar from LinkedIn
