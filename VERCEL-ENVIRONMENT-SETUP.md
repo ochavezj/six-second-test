@@ -103,7 +103,9 @@ If you still encounter issues after setting up the environment variables and cre
 
 ## Fixing "Method Not Allowed" Error
 
-If you encounter a "Method Not Allowed" error when uploading a resume, this is likely due to how Vercel is handling the API routes. The fix has been implemented in the vercel.json file by adding explicit route configurations:
+If you encounter a "Method Not Allowed" error when uploading a resume, this is likely due to how Vercel is handling the API routes. We've implemented two complementary fixes:
+
+### 1. Updated vercel.json with Explicit Route Configurations
 
 ```json
 {
@@ -122,7 +124,27 @@ If you encounter a "Method Not Allowed" error when uploading a resume, this is l
 }
 ```
 
-This configuration explicitly tells Vercel to allow POST and OPTIONS methods for these API routes. After deploying this change, the upload functionality should work correctly.
+This configuration explicitly tells Vercel to allow POST and OPTIONS methods for these API routes.
+
+### 2. Added OPTIONS Request Handlers to API Routes
+
+We've also added explicit OPTIONS request handlers to both API routes:
+
+```typescript
+// Handle OPTIONS requests for CORS
+export async function OPTIONS(req: Request) {
+  return new NextResponse(null, {
+    status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
+  });
+}
+```
+
+This dual approach ensures that the API routes properly handle CORS preflight requests and should resolve the "Method Not Allowed" error. After deploying these changes, the upload functionality should work correctly.
 
 ## Advanced Troubleshooting
 
