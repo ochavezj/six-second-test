@@ -8,11 +8,21 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: '/api/:path*',
-        destination: '/api/:path*',
+        source: '/api/checkout',
+        destination: '/api/checkout',
+      },
+      {
+        source: '/api/upload',
+        destination: '/api/upload',
       },
     ];
   },
+  // Ensure output is set to export for Vercel
+  output: 'standalone',
+  // Disable strict mode for production
+  reactStrictMode: false,
+  // Ensure trailing slashes are handled correctly
+  trailingSlash: false,
 };
 
 export default nextConfig;

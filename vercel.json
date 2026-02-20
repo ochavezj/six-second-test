@@ -1,11 +1,12 @@
 {
-  "version": 2,
-  "routes": [
-    { "src": "/api/checkout", "dest": "/api/checkout" },
-    { "src": "/api/upload", "dest": "/api/upload" },
-    { "src": "/(.*)", "dest": "/" }
+  "rewrites": [
+    { "source": "/api/checkout", "destination": "/api/checkout" },
+    { "source": "/api/upload", "destination": "/api/upload" },
+    { "source": "/(.*)", "destination": "/" }
   ],
   "env": {
     "NEXT_PUBLIC_BASE_URL": "https://six-second-test.com"
-  }
+  },
+  "buildCommand": "next build",
+  "outputDirectory": ".next"
 }
