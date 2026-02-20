@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
 // Simplified middleware to avoid TypeScript errors
-export function middleware(request) {
+export function middleware(request: NextRequest) {
   // Simply pass through all requests with CORS headers
   const response = NextResponse.next();
   
