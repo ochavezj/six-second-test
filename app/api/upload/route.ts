@@ -5,6 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 // Configure API route
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function POST(req: Request) {
   try {

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/api/checkout", "dest": "/api/checkout" },
+    { "src": "/api/upload", "dest": "/api/upload" },
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "env": {
+    "NEXT_PUBLIC_BASE_URL": "https://six-second-test.com"
+  }
+}
