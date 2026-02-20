@@ -97,7 +97,7 @@ export default function Home() {
                 Strong candidates get missed not because they lack talent, but because their impact isn&apos;t immediately visible.
               </p>
               <p className="mt-3 text-slate-700">
-                The 6-Second Test isn&apos;t a resume rewrite service. It&apos;s not an AI keyword generator, and it&apos;s definitely not a &quot;Beat ATS&quot; gimmick.
+                The 6-Second Test isn&apos;t a resume rewrite service. It&apos;s not an AI keyword generator, and it&apos;s definitely not a &quot;Beat the ATS&quot; gimmick.
                 It&apos;s a clarity audit — built from how real recruiters actually screen.
               </p>
              <p className="mt-3 text-slate-700">
