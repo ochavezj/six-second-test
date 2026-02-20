@@ -4,5 +4,17 @@
   "outputDirectory": ".next",
   "env": {
     "NEXT_PUBLIC_BASE_URL": "https://six-second-test.com"
-  }
+  },
+  "routes": [
+    {
+      "src": "/api/upload",
+      "methods": ["POST", "OPTIONS"],
+      "dest": "/api/upload"
+    },
+    {
+      "src": "/api/checkout",
+      "methods": ["POST", "OPTIONS"],
+      "dest": "/api/checkout"
+    }
+  ]
 }
