@@ -28,8 +28,7 @@ export async function POST() {
   });
 
   console.log("STRIPE SESSION ID =", session.id);
-  // @ts-ignore (Stripe types vary a bit)
-  console.log("STRIPE SUCCESS URL =", (session as any).success_url);
+  console.log("STRIPE SUCCESS URL =", (session as { success_url: string }).success_url);
 
   return NextResponse.redirect(session.url as string, { status: 303 });
 }
