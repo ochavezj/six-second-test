@@ -63,31 +63,7 @@ export default function Home() {
               <li>A realistic screening perspective</li>
             </ul>
             
-            <div className="mt-6 p-4 border border-slate-200 rounded-lg bg-white relative overflow-hidden">
-              <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center">
-                <div className="text-sm text-slate-500 px-4 py-2 bg-white/90 rounded-full border border-slate-200">
-                  Sample Preview
-                </div>
-              </div>
-              <div className="flex items-center mb-3">
-                <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center text-2xl font-bold text-slate-800">
-                  72
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-semibold text-slate-900">Recruiter Readiness Score</h3>
-                  <p className="text-sm text-slate-600">Good clarity, some improvements needed</p>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="h-3 bg-slate-100 rounded-full w-full">
-                  <div className="h-3 bg-slate-700 rounded-full w-3/4"></div>
-                </div>
-                <div className="flex justify-between text-xs text-slate-500">
-                  <span>Credibility</span>
-                  <span>75%</span>
-                </div>
-              </div>
-            </div>
+            {/* Sample preview block removed as requested */}
           </div>
 
           <div>
