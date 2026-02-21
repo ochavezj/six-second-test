@@ -185,6 +185,13 @@ export default function Home() {
                 <span className="text-slate-700">One Rewritten Bullet Example</span>
               </li>
             </ul>
+            
+            <div className="mt-8 p-4 bg-slate-50 border border-slate-200 rounded-lg">
+              <h3 className="text-sm font-semibold text-slate-700">A quick note on privacy</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Your resume is used only to generate your report and is not stored after processing. Your email is used to deliver your report (and optional updates if you opt in later).
+              </p>
+            </div>
           </div>
         </section>
 
@@ -225,6 +232,15 @@ export default function Home() {
         <footer className="mt-16 border-t border-slate-200 pt-8 text-sm text-slate-500">
           <p>© 2026 The 6-Second Test™. All rights reserved.</p>
           <p className="mt-2">Created by Oscar Chavez, Talent Acquisition Leader</p>
+          
+          <div className="mt-6 text-xs text-slate-400 space-y-2">
+            <p>
+              This tool provides automated feedback based on common recruiter screening patterns and does not guarantee interviews or job offers.
+            </p>
+            <p>
+              Because this is a digital evaluation delivered after purchase, all sales are final. If you experience a technical issue, reach out and we&apos;ll make it right.
+            </p>
+          </div>
         </footer>
       </div>
     </main>
