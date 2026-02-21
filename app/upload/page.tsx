@@ -44,7 +44,17 @@ function UploadInner() {
       fd.append("email", email);
       fd.append("file", file);
 
-const res = await fetch("/api/upload", { method: "POST", body: fd });
+const res = await fetch("/api/upload", {
+  method: "POST",
+  body: fd,
+  headers: {
+    // Don't set Content-Type header when using FormData
+    // The browser will automatically set it with the correct boundary
+    'Accept': 'application/json',
+  },
+  // Ensure credentials are included
+  credentials: 'same-origin'
+});
       
 // Handle potential JSON parsing errors
 let data;
