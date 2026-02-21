@@ -86,25 +86,52 @@ GRANT EXECUTE ON FUNCTION public.get_submission_count TO service_role;
 -- Set up RLS policies for the submissions_count table
 ALTER TABLE public.submissions_count ENABLE ROW LEVEL SECURITY;
 
--- Create policy to allow service_role to read the table
-CREATE POLICY "Service role can read submissions_count"
-  ON public.submissions_count
-  FOR SELECT
-  TO service_role
-  USING (true);
+-- Check if policies exist before creating them
+DO $$
+BEGIN
+  -- Check if read policy exists
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_policies 
+    WHERE tablename = 'submissions_count' 
+    AND policyname = 'Service role can read submissions_count'
+  ) THEN
+    -- Create policy to allow service_role to read the table
+    CREATE POLICY "Service role can read submissions_count"
+      ON public.submissions_count
+      FOR SELECT
+      TO service_role
+      USING (true);
+  END IF;
 
--- Create policy to allow service_role to update the table
-CREATE POLICY "Service role can update submissions_count"
-  ON public.submissions_count
-  FOR UPDATE
-  TO service_role
-  USING (true);
+  -- Check if update policy exists
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_policies 
+    WHERE tablename = 'submissions_count' 
+    AND policyname = 'Service role can update submissions_count'
+  ) THEN
+    -- Create policy to allow service_role to update the table
+    CREATE POLICY "Service role can update submissions_count"
+      ON public.submissions_count
+      FOR UPDATE
+      TO service_role
+      USING (true);
+  END IF;
 
--- Create policy to allow service_role to insert into the table
-CREATE POLICY "Service role can insert into submissions_count"
-  ON public.submissions_count
-  FOR INSERT
-  TO service_role
-  WITH CHECK (true);
+  -- Check if insert policy exists
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_policies 
+    WHERE tablename = 'submissions_count' 
+    AND policyname = 'Service role can insert into submissions_count'
+  ) THEN
+    -- Create policy to allow service_role to insert into the table
+    CREATE POLICY "Service role can insert into submissions_count"
+      ON public.submissions_count
+      FOR INSERT
+      TO service_role
+      WITH CHECK (true);
+  END IF;
+END
+$$;
+
 
 
