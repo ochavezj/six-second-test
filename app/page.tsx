@@ -150,7 +150,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <span className="text-slate-700">Recruiter Readiness Score (0-100)</span>
+                <span className="text-slate-700">A Recruiter Readiness Score (0-100)</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-800">
@@ -158,7 +158,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <span className="text-slate-700">Quick Verdict (2-3 sentences)</span>
+                <span className="text-slate-700">Credibility alignment (title vs. scope)</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-800">
@@ -166,7 +166,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <span className="text-slate-700">Section-by-Section Review</span>
+                <span className="text-slate-700">Impact compression (are outcomes buried?)</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-800">
@@ -174,7 +174,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <span className="text-slate-700">Top 3 High-Leverage Fixes</span>
+                <span className="text-slate-700">Outcome clarity feedback</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-800">
@@ -182,7 +182,23 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <span className="text-slate-700">One Rewritten Bullet Example</span>
+                <span className="text-slate-700">3 high-leverage improvements</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </div>
+                <span className="text-slate-700">One rewritten bullet example</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </div>
+                <span className="text-slate-700">A realistic screening perspective</span>
               </li>
             </ul>
             
