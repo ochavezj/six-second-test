@@ -1,7 +1,15 @@
--- This SQL script sets up the submission counter functionality in Supabase
--- Run this in the Supabase SQL Editor
+-- First, create the submissions_count table
+CREATE TABLE IF NOT EXISTS public.submissions_count (
+  id INTEGER PRIMARY KEY,
+  count INTEGER NOT NULL DEFAULT 0
+);
 
--- Create the submissions_count table if it doesn't exist
+-- Insert initial record with id=1 and count=0 if it doesn't exist
+INSERT INTO public.submissions_count (id, count)
+VALUES (1, 0)
+ON CONFLICT (id) DO NOTHING;
+
+-- Now create the functions
 CREATE OR REPLACE FUNCTION public.create_submissions_table()
 RETURNS void
 LANGUAGE plpgsql
@@ -98,3 +106,4 @@ CREATE POLICY "Service role can insert into submissions_count"
   FOR INSERT
   TO service_role
   WITH CHECK (true);
+
