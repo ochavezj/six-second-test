@@ -106,7 +106,7 @@ export default function Home() {
           {submissionStatus.limitReached && (
             <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-lg text-amber-800">
               <p className="text-sm font-medium">
-                We've reached our beta testing limit of {submissionStatus.limit} submissions. 
+                We&apos;ve reached our beta testing limit of {submissionStatus.limit} submissions. 
                 Thank you for your interest! Please check back later when we launch the full version.
               </p>
             </div>
