@@ -107,3 +107,4 @@ CREATE POLICY "Service role can insert into submissions_count"
   TO service_role
   WITH CHECK (true);
 
+
