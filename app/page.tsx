@@ -231,7 +231,7 @@ export default function Home() {
 
         <footer className="mt-16 border-t border-slate-200 pt-8 text-sm text-slate-500">
           <p>© 2026 The 6-Second Test™. All rights reserved.</p>
-          <p className="mt-2">Created by Oscar Chavez, Talent Acquisition Leader</p>
+          <p className="mt-2">Created by Oscar Chavez - a Real Recruiter</p>
           
           <div className="mt-6 text-xs text-slate-400 space-y-2">
             <p>
