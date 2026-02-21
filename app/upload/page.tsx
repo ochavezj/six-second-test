@@ -44,8 +44,17 @@ function UploadInner() {
       fd.append("email", email);
       fd.append("file", file);
 
-      const res = await fetch("/api/upload", { method: "POST", body: fd });
-      const data = await res.json();
+const res = await fetch("/api/upload", { method: "POST", body: fd });
+      
+// Handle potential JSON parsing errors
+let data;
+try {
+  const text = await res.text();
+  data = text ? JSON.parse(text) : {};
+} catch (jsonError) {
+  console.error("JSON parsing error:", jsonError);
+  throw new Error("Invalid response from server. Please try again.");
+}
 
       if (!res.ok) throw new Error(data?.error || "Upload failed.");
 
