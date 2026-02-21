@@ -63,13 +63,13 @@ export default function Home() {
               Don&apos;t get overlooked.
             </p>
             <p className="text-lg leading-relaxed text-slate-700">
-              Recruiters move quickly — not because they don&apos;t care, but because they have to.
+              Recruiters move quickly! Not because they don&apos;t care, but because they have to.
             </p>
             <p className="text-lg leading-relaxed text-slate-700">
-              I&apos;ve reviewed thousands of resumes over 20+ years in talent acquisition. The difference between &quot;maybe&quot; and &quot;interview&quot; is often clarity.
+              I&apos;ve reviewed thousands of resumes over 20+ years in talent acquisition. The difference between &quot;maybe&quot; and &quot;interview&quot; often comes down to clarity.
             </p>
             <p className="text-lg leading-relaxed text-slate-700">
-              This recruiter-calibrated audit shows you what&apos;s working — and what might be getting buried.
+              This recruiter-calibrated audit shows you what&apos;s working, and what might be getting buried.
             </p>
           </div>
 
@@ -231,7 +231,7 @@ export default function Home() {
 
         <footer className="mt-16 border-t border-slate-200 pt-8 text-sm text-slate-500">
           <p>© 2026 The 6-Second Test™. All rights reserved.</p>
-          <p className="mt-2">Created by Oscar Chavez - a Real Recruiter</p>
+          <p className="mt-2">Created by Oscar Chavez - A Real Recruiter</p>
           
           <div className="mt-6 text-xs text-slate-400 space-y-2">
             <p>
