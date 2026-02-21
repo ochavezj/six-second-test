@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [submissionStatus, setSubmissionStatus] = useState({
@@ -195,23 +196,26 @@ export default function Home() {
               </h2>
               <div className="mt-4 space-y-4 text-slate-700">
                 <p>
-                  I've spent two decades hiring across industries, and I still review resumes daily. Strong candidates get missed not because they lack talent, but because their impact isn't immediately visible.
+                  I&apos;ve spent two decades hiring across industries, and I still review resumes daily. Strong candidates get missed not because they lack talent, but because their impact isn&apos;t immediately visible.
                 </p>
                 <p>
-                  The 6-Second Test isn't a resume rewrite service. It's not an AI keyword generator, and it's definitely not a "Beat the ATS" gimmick. It's a clarity audit — built from how real recruiters actually screen, and designed to help you build your resume with intention.
+                  The 6-Second Test isn&apos;t a resume rewrite service. It&apos;s not an AI keyword generator, and it&apos;s definitely not a &quot;Beat the ATS&quot; gimmick. It&apos;s a clarity audit — built from how real recruiters actually screen, and designed to help you build your resume with intention.
                 </p>
                 <p className="font-medium mt-6">
-                  Rooting & Recruiting for you,<br />
+                  Rooting &amp; Recruiting for you,<br />
                   -Oscar from LinkedIn
                 </p>
               </div>
             </div>
             <div className="md:w-1/3 flex justify-center md:justify-end">
-              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-slate-200 shadow-md">
-                <img
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-slate-200 shadow-md relative">
+                <Image
                   src="https://media.licdn.com/dms/image/v2/D5603AQGeWU_n3lu35g/profile-displayphoto-shrink_400_400/B56ZV.N_fDHQAg-/0/1741579352305?e=1773273600&v=beta&t=14Oikfqg8qsgdMxCMR7AgIo_TG9X6GtqVsJqp6RxIcQ"
                   alt="Oscar Chavez"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 192px"
+                  style={{ objectFit: 'cover' }}
+                  priority
                 />
               </div>
             </div>
