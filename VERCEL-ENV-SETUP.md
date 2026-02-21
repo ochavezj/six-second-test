@@ -16,13 +16,13 @@ The error message `{"error":"Missing STRIPE_SECRET_KEY, STRIPE_PRICE_ID, or NEXT
 ### Stripe Configuration
 ```
 Name: STRIPE_SECRET_KEY
-Value: YOUR_STRIPE_SECRET_KEY_HERE
+Value: [PLACEHOLDER_STRIPE_SECRET_KEY]
 Environment: Production, Preview, Development
 ```
 
 ```
 Name: STRIPE_PRICE_ID
-Value: YOUR_STRIPE_PRICE_ID_HERE
+Value: [PLACEHOLDER_STRIPE_PRICE_ID]
 Environment: Production, Preview, Development
 ```
 
@@ -36,13 +36,13 @@ Environment: Production, Preview, Development
 ### Supabase Configuration
 ```
 Name: SUPABASE_URL
-Value: YOUR_SUPABASE_URL_HERE
+Value: [PLACEHOLDER_SUPABASE_URL]
 Environment: Production, Preview, Development
 ```
 
 ```
 Name: SUPABASE_SERVICE_ROLE_KEY
-Value: YOUR_SUPABASE_SERVICE_ROLE_KEY_HERE
+Value: [PLACEHOLDER_SUPABASE_SERVICE_ROLE_KEY]
 Environment: Production, Preview, Development
 ```
 
