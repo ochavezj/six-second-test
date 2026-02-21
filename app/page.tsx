@@ -187,6 +187,37 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mt-16 pt-8 border-t border-slate-200">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex-1">
+              <h2 className="text-2xl font-semibold text-slate-800">
+                Why I Built This
+              </h2>
+              <div className="mt-4 space-y-4 text-slate-700">
+                <p>
+                  I've spent two decades hiring across industries, and I still review resumes daily. Strong candidates get missed not because they lack talent, but because their impact isn't immediately visible.
+                </p>
+                <p>
+                  The 6-Second Test isn't a resume rewrite service. It's not an AI keyword generator, and it's definitely not a "Beat the ATS" gimmick. It's a clarity audit — built from how real recruiters actually screen, and designed to help you build your resume with intention.
+                </p>
+                <p className="font-medium mt-6">
+                  Rooting & Recruiting for you,<br />
+                  -Oscar from LinkedIn
+                </p>
+              </div>
+            </div>
+            <div className="md:w-1/3 flex justify-center md:justify-end">
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-slate-200 shadow-md">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/D5603AQGeWU_n3lu35g/profile-displayphoto-shrink_400_400/B56ZV.N_fDHQAg-/0/1741579352305?e=1773273600&v=beta&t=14Oikfqg8qsgdMxCMR7AgIo_TG9X6GtqVsJqp6RxIcQ"
+                  alt="Oscar Chavez"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <footer className="mt-16 border-t border-slate-200 pt-8 text-sm text-slate-500">
           <p>© 2026 The 6-Second Test™. All rights reserved.</p>
           <p className="mt-2">Created by Oscar Chavez, Talent Acquisition Leader</p>
