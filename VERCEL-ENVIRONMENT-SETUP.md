@@ -16,7 +16,7 @@ The error message `{"error":"Missing STRIPE_SECRET_KEY, STRIPE_PRICE_ID, or NEXT
 ### Stripe Configuration
 ```
 Name: STRIPE_SECRET_KEY
-Value: YOUR_STRIPE_SECRET_KEY_HERE
+Value:
 Environment: Production, Preview, Development
 ```
 
@@ -42,7 +42,7 @@ Environment: Production, Preview, Development
 
 ```
 Name: SUPABASE_SERVICE_ROLE_KEY
-Value: YOUR_SUPABASE_SERVICE_ROLE_KEY_HERE
+Value:
 Environment: Production, Preview, Development
 ```
 
